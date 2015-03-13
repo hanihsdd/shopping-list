@@ -1,0 +1,313 @@
+/****************
+ Box Sizing via CSS-Tricks 
+ https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+****************/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/****************
+ Reset
+****************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/****************
+ General
+****************/
+
+body {
+	background: #f3f3f3;
+	font-size: 16px;
+	font-family: 'PT Serif', Georgia, serif;
+	color: #343434;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	max-width: 100%; 
+	margin: 0 auto;
+}
+
+
+/****************
+ Header
+****************/
+
+header {
+	background: #7DB4B5; 
+	color: #f8f8f8;
+	height: 4em;
+	line-height: 4em;
+}
+
+header nav,
+header h1 {
+	font-size: 1.5em;
+}
+
+header nav {
+	width: 25%;
+	float: left;
+	text-align: left;
+	padding-left: 10%;
+/*	color: #14B294;
+*/}
+
+header h1 {
+	width: 75%;
+	text-align: center;
+	font-family: 'Futura Std';
+	font-weight: ;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+/****************
+ Summary
+****************/
+
+.summary ul {
+	text-align: center;
+	margin: 2em 0;
+}
+
+.summary li {
+	display: inline-block;
+	font-size: 2em; /* 32px */
+	height: 2em; /* 64px */
+	width: 2em; /* 64px */
+	line-height: 2em; /* 64px */
+	border-radius: 50px;
+	margin: 0 1em;
+	font-family: 'Brandon Grotesque';
+	font-weight: 500;
+	color: #fff;
+}
+
+/* Circle 1 - Items*/
+.summary li.number-1 {
+	background: #7DB4B5;
+}
+
+/* Circle 2 - Done*/
+.summary li.number-2 {
+	background: #7DB4B5;
+}
+
+/* Circle 3 - To Go*/
+.summary li.number-3 {
+	background: #E89189;
+}
+
+.summary li h3 {
+	margin-top: -1em; /* 12px */
+	font-size: 0.375em; /* 12px */
+	text-transform: uppercase;
+	color: #4F4F4F;
+}
+
+/****************
+ Add Items
+****************/
+
+.add-items {
+	position: relative;
+	margin: 2em 0;
+	text-align: center;
+}
+
+.add-items input {
+	background: #fff;
+	width: 90%;
+	height: 3em;
+	line-height: 3em;
+	border: 1px solid #fff;
+	border-radius: 40px;
+	padding-left: 10%;
+	font-size: 1em;
+	font-family: 'PT Serif', Georgia, serif;
+	color: #343434;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-webkit-input-placeholder {
+	color: #7DB4B5;
+	font-family: 'Brandon Grotesque';
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
+}
+
+input:focus {
+	border: 1px solid #7DB4B5;
+	outline: 0;
+}
+
+
+.add-items i {
+	position: absolute;
+	left: 10%;
+	line-height: 2.4em; /* 48x */
+	font-size: 1.25em; /* 20px */
+	color: #7DB4B5;
+}
+
+/****************
+ List
+****************/
+
+.list-items {
+	margin: 2em 0;
+}
+
+.list-items ul {
+	border-top: 1px solid #e7e7e7;
+}
+
+.list-items li {
+	padding: 1em 0 1em 15%;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.list-items li:nth-child(odd) {
+	background-color: #fff;
+}
+
+.list-items li:nth-child(even) {
+	background-color: #fff;
+}
+
+.list-items li i {
+	font-size: 1.25em;
+}
+
+.list-items li i.checkbox {
+	position: absolute;
+	left: 10%;
+}
+
+.list-items li i.remove {
+	position: absolute;
+	right: 10%;
+}
+
+.list-items li.checked {
+	opacity: 0.3;
+}
+
+
+/****************
+ Media Queries
+****************/
+
+/* 600px max width */
+
+@media screen and (max-width: 600px) {
+	
+	header {
+		height: 2.666666em;
+		line-height: 2.666666em;
+	}
+
+	header nav,
+	header h1 {
+		font-size: 1em;
+	}
+
+	.summary li {
+		font-size: 1.5em;
+	}
+
+	.summary li h3 {
+	font-size: 0.5em;
+}
+
+	.add-items input {
+		font-size: 0.75em;
+	}
+
+	.add-items i {
+		font-size: 1em;
+	}
+
+	.list-items {
+		font-size: 0.8em;
+	}
+
+	.list-items li {
+		padding-left: 20%;
+	}
+
+	.add-items input {
+		padding-left: 15%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
