@@ -7,6 +7,7 @@
 	<title>Shopping List</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/app.js"></script>
@@ -20,20 +21,20 @@
 	</header>
 	
 	<ul class="summary">
-		<li class="number number-1">
-			16
+		<li class="number">
+			<span class="number-1">0</span>
 			<div class="caption">
 				<h3>Items</h3>
 			</div>
 		</li>
-		<li class="number number-2">
-			9
+		<li class="number">
+			<span class="number-2">0</span>
 			<div class="caption">
 				<h3>Done</h3>
 			</div>
 		</li>
-		<li class="number number-3">
-			7
+		<li class="number to-go">
+			<span class="number-3">0</span>
 			<div class="caption">
 				<h3>To Go</h3>
 			</div>
@@ -47,26 +48,16 @@
 
 	<ul class="shopping-list">
 		<li>
-			<i class="fa fa-square-o checkbox"></i>Chicken
-			<i class="fa fa-times remove"></i>
+			<i class="checkbox fa fa-square-o"></i>Click the box to check me<i class="remove fa fa-times"></i>
 		</li>
 		<li class="checked">
-			<i class="fa fa-check-square-o checkbox"></i>Chicken
-			<i class="fa fa-times remove"></i>
+			<i class="checkbox fa fa-check-square-o"></i>Click the tickbox to uncheck me<i class="remove fa fa-times"></i>
 		</li>
 		<li>
-			<i class="fa fa-square-o checkbox"></i>Chicken
-			<i class="fa fa-times remove"></i>
-		</li>
-		<li>
-			<i class="fa fa-square-o checkbox"></i>Chicken
-			<i class="fa fa-times remove"></i>
-		</li>
-		<li>
-			<i class="fa fa-square-o checkbox"></i>Chicken
-			<i class="fa fa-times remove"></i>
+			<i class="checkbox fa fa-square-o"></i>Click the x to remove me<i class="remove fa fa-times"></i>
 		</li>
 	</ul>
+	<p class="message">You have no items on your list.</p>
 
 </div>
 
